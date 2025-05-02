@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Navigation links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #ffcc00;
+    border-bottom: 2px solid #ffcc00;
+  }
+  
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      opacity: 0;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 160px;
+      padding: 10px;
+      transform: translateY(-10px);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+  
+    .nav-links.active {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
